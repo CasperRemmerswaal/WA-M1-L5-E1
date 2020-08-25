@@ -1,0 +1,111 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/4a/66/6b/4a666b16cf8a15b9687edb5085012589.jpg);
+    font-size: medium;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 80px 1fr 2fr 50px;
+    grid-template-areas:
+    "h"
+    "n"
+    "m"
+    "a"
+    "f";
+}
+
+h1{
+    font-size: larger;
+}
+
+h2{
+    font-size:large;
+}
+
+main{
+    background-color: rgb(60, 105, 66);
+    color: indigo; 
+    grid-area:m;
+    padding: 6px;
+}
+
+footer{
+    background-color: paleturquoise;
+    grid-area:f;
+}
+
+header{
+    background-color: rgb(60, 105, 66);
+    color: indigo;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 3px;
+    grid-area:h;    
+}
+
+aside{
+    background-color: rgb(60, 105, 66);
+    grid-area: a;
+    padding: 6px;
+}
+
+nav{
+    grid-area:n;
+    font-size: small;
+}
+
+.hor{
+    list-style-type: none;
+    margin: 0;
+    padding: 3px;
+    border: 5px solid rgb(82, 20, 90);
+    border-style: double ;
+    background-color: rgb(172, 71, 172);
+}
+
+.container{
+    display:flex;
+    flex-flow: row wrap;
+    align-content: stretch;
+}
+
+@media (min-width: 600px) {
+    body{
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: 70px 3fr 5fr 50px;
+        grid-template-areas:
+        "h h"
+        "n m"
+        "n a"
+        "f f";
+        font-size: large;
+    }
+
+    h1{
+        font-size: x-large;
+    }
+
+    h2{
+        font-size: larger;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    nav{
+        font-size:medium;
+    }
+}
+
+@media (min-width: 1000px) {
+    body{
+        grid-template-columns: 150px 3fr 2fr;
+        grid-template-rows: 70px 1fr 50px;
+        grid-template-areas:
+        "h h h"
+        "n m a"
+        "f f f"
+    }
+
+}
